@@ -3,7 +3,7 @@ import React from 'react'
 const Movie = (props) => {
     //artwork title description year
   return (
-    <div className=' bg-slate-200 w-[200px] h-[250px]'>
+    <div className=' bg-slate-100 w-[200px] h-[300px] shadow-lg rounded-lg'>
         <div>
             <img src={props?.img}/>
             <h2>{props?.title}</h2>
