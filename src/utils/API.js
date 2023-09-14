@@ -10,6 +10,7 @@ const   baseUrl = ' http://www.omdbapi.com';
 const getApi = axios.create({
     baseURL:baseUrl,
     params:{apikey:'af5a9886'}
+    
 })
 
 export default getApi;

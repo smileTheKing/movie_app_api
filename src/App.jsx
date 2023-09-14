@@ -21,8 +21,9 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/movie" element={<Movie />} />
             <Route path="/detail" element={<MovieDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
+         
         </Routes>
       </BrowserRouter>
       </AppProvider>

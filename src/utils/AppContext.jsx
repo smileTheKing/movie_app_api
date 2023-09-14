@@ -9,6 +9,9 @@ export const AppProvider = ({ children }) => {
   const [error, setError] = useState("");
   const [searchMovie, setSeacrhMovie] = useState([]);
 
+  const [favorite, setFavorite] = useState(false);
+
+
   const getMovies = async () => {
     try {
       const result = await getApi.get("", { params: { s: "all" } });
@@ -56,7 +59,9 @@ export const AppProvider = ({ children }) => {
         setSeacrh,
         searchMovie,
         setSeacrhMovie,
-        error
+        error,
+        favorite, 
+        setFavorite
       }}
     >
       {children}
