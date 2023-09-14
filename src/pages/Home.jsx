@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className=" w-full flex min-h-screen  bg-white">
       <SideBar />
-      <div className="px-8 py-12  relative flex justify-start items-start flex-wrap ">
+      <div className="px-8 py-12  relative flex justify-start items-start flex-wrap">
         {/**check if search is empty than a return all movies*/}
         {movies && !search ? (
           movies?.map((movie) => (

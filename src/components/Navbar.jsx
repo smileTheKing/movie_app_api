@@ -35,7 +35,7 @@ const Navbar = () => {
           className="flex-1 p-2 outline-none bg-inherit text-center"
           />
           <button 
-          className="flex-2 px-4 hover:text-red-400"
+          className="flex-2 px-4 hover:text-red-300"
           onClick={()=>setSeacrh('')}
           >clear</button>
          </div>
