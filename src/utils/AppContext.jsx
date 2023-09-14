@@ -44,6 +44,26 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+
+  const getMovieById = async (id) => {
+  
+    try {
+     // if (search.length < 3) return;http://www.omdbapi.com/?i=tt1016150
+      const result = await getApi.get("", { params: { i: id } });
+    
+      if (search.length < 3 ) return
+    
+    setError(result.data.Error)
+
+      if (result.data.Search) {
+        setSeacrhMovie(result.data.Search);
+      }
+     
+    } catch (e) {
+      console.log(e.message);
+     // setError(e.message)
+    }
+  };
   useEffect(() => {
     //call getMovie
     getMovies();

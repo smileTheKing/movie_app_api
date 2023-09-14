@@ -6,12 +6,11 @@ const Movie = ({movie}) => {
 
    const {favorite,setFavorite} = useAppContext()
   return (
-    <div className=' bg-slate-100 w-[250px] max-h-[400px] h-[400px] shadow-lg rounded-lg'>
+    <div className=' bg-slate-100 w-[250px] max-h-[500px]  h-[500px] shadow-lg rounded-lg'>
         <div className=''>
-            <img src={movie?.Poster} className='rounded-t-lg object-cover overflow-hidden w-full h-[250px]'/>
+            <img src={movie?.Poster} className='rounded-t-lg object-cover overflow-hidden w-full'/>
           <div className=' p-2 space-y-2'>
-          <h2 className='font-bold text-base'>Title: {movie?.Title}</h2>
-
+          <h2 className='font-bold text-base  w-full line-clamp-1'>Title: {movie?.Title}</h2>
           <hr/>
             <div className=' flex items-center justify-between '>
             <div>

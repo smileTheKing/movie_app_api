@@ -13,21 +13,21 @@ const NotFound = () => <h1>404 no content found!</h1>;
 function App() {
   return (
    
-     <>
+     <div className="flex flex-col min-h-screen">
       <AppProvider>
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="/movie" element={<Movie />} />
-            <Route path="/detail" element={<MovieDetail />} />
+            <Route path="/detail/:id" element={<MovieDetail />} />
             <Route path="*" element={<NotFound />} />
           </Route>
          
         </Routes>
       </BrowserRouter>
       </AppProvider>
-     </>
+     </div>
    
   );
 }
