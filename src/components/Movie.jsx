@@ -1,15 +1,10 @@
 import React from 'react'
-<<<<<<< HEAD
 import { motion } from "framer-motion";
 
-=======
-import { Heart } from 'lucide-react';
-import { useAppContext } from '../utils/AppContext';
->>>>>>> main
 const Movie = ({movie}) => {
     //artwork title description year
 
-   const {favorite,setFavorite} = useAppContext()
+    //console.log(movie)
   return (
     <div className=' bg-slate-100 w-[250px] max-h-[400px] h-[400px] shadow-lg rounded-lg'>
         <motion.div className='box'whileHover={{ scale: 1.2 }}
@@ -20,21 +15,11 @@ const Movie = ({movie}) => {
           <h2 className='font-bold text-base'>Title: {movie?.Title}</h2>
 
           <hr/>
-            <div className=' flex items-center justify-between '>
-            <div>
             <h2 className='font-semibold text-slate-600 '>Type: {movie?.Type}</h2>
             <h2 className='font-semibold text-slate-600'> Year: {movie?.Year}</h2>
-            </div>
-            <Heart color={favorite?'red':'#000'} size={18} fill={favorite?'red':'#000'} onClick={()=>setFavorite((x)=>!x)} />
-            </div>
-            
           </div>
-<<<<<<< HEAD
+
         </motion.div>
-=======
-        
-        </div>
->>>>>>> main
     </div>
   )
 }
