@@ -1,40 +1,32 @@
 import React, { useEffect, useState } from "react";
-//import API from '../utils/API';
 import Movie from "../components/Movie";
 import SideBar from "../components/SideBar";
-import getApi from "../utils/API";
-import { data } from "autoprefixer";
+import { useAppContext } from "../utils/AppContext";
 
 const Home = () => {
-  const [movies, setMovies] = useState([]);
-
-  const getMovie = async () => {
-    try {
-      const result = await getApi.get("", { params: { s: "all" } });
-
-      console.log( result.data)
-
-      //result is only resuting a single object
-      setMovies(result.data.Search);
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
-
-  useEffect(() => {
-    //call getMovie
-    getMovie();
-  }, []);
+  const { movies, searchMovie, search,error } = useAppContext();
 
   return (
     <div className=" w-full flex min-h-screen  bg-white">
       <SideBar />
-      <div className=" m-8 flex justify-start items-start flex-wrap ">
-      {movies?.map((movie,idx) => (
-          <div className="m-2" key={idx}>
-               <Movie movie={movie}/>
-          </div>
-        ))}
+      <div className="px-8 py-12  relative flex justify-start items-start flex-wrap ">
+        {/**check if search is empty than a return all movies*/}
+        {movies && !search ? (
+          movies?.map((movie) => (
+            <div className="m-2" key={movie.imdbID}>
+              <Movie movie={movie} />
+            </div>
+          ))
+        ) : (
+          <>
+          {/** display only search Movies*/}
+            {!error?(searchMovie.map((movie) => (
+              <div className="m-2" key={movie.imdbID}>
+                <Movie movie={movie} />
+              </div>)
+            )):(<div className=" w-[500px] top-[350px]  left-[350px]  absolute  text-3xl font-semibold "><h1>{error}</h1></div>) }
+          </>
+        )}
       </div>
     </div>
   );

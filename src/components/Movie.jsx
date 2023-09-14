@@ -12,7 +12,7 @@ const Movie = ({movie}) => {
           <h2 className='font-bold text-base'>Title: {movie?.Title}</h2>
 
           <hr/>
-            <h2 className='font-semibold text-slate-600'>Type: {movie?.Type}</h2>
+            <h2 className='font-semibold text-slate-600 '>Type: {movie?.Type}</h2>
             <h2 className='font-semibold text-slate-600'> Year: {movie?.Year}</h2>
           </div>
           
