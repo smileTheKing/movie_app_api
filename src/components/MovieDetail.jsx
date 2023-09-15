@@ -30,9 +30,11 @@ const MovieDetail = () => {
 
   return (
    <div className=' bg-slate-800  text-slate-200 flex flex-1 flex-col'>
+    
       <div className=' container flex  flex-col-reverse md:flex-row flex-1 mx-auto p-12 md:items-center items-start  space-x-14'>     
+      <button onClick={()=>back('/')}><ChevronLeft to={'/'} /> Back</button>
         {/** first part*/}
-        <button onClick={()=>back('/')}><ChevronLeft to={'/'} /> Back</button>
+       
         <div className=' flex flex-col  w-2/4 items-end text-right justify-start gap-8'>
         <div className=' flex'>
           <Star size={24} color='yellow' fill='yellow'/>
