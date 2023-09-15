@@ -10,11 +10,7 @@ const Home = () => {
   return (
     <div className=" w-full lg:flex-row flex flex-col flex-1 bg-slate-600">
       <SideBar />
-<<<<<<< HEAD
-      <div className="px-8 py-12  relative flex justify-start items-start flex-wrap">
-=======
       <div className=" w-full mt-8 md:mx-6 items-center justify-center relative flex md:justify-start md:items-start flex-wrap overflow-hidden ">
->>>>>>> a14e5f3f3f2803cf199230fe785260150a0cda73
         {/**check if search is empty than a return all movies*/}
         {movies && !search ? (
           movies?.map((movie) => (

@@ -20,22 +20,6 @@ const Navbar = () => {
             <Link to="/">Logo</Link>
           </div>
 
-<<<<<<< HEAD
-          
-             
-         <div onKeyUpCapture={handleSearch} className="overflow-hidden flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-md text-slate-300" placeholder="search">
-         <input 
-          value={search}
-          onChange={(e)=>setSeacrh(e.target.value)}
-          
-          className="flex-1 p-2 outline-none bg-inherit text-center"
-          />
-          <button 
-          className="flex-2 px-4 hover:text-red-300"
-          onClick={()=>setSeacrh('')}
-          >clear</button>
-         </div>
-=======
           <div
             onKeyUpCapture={handleSearch}
             className="overflow-hidden flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-md text-slate-300"
@@ -53,7 +37,6 @@ const Navbar = () => {
               clear
             </button>
           </div>
->>>>>>> a14e5f3f3f2803cf199230fe785260150a0cda73
 
           <div className=" flex space-x-4 justify-center items-center">
             <li>
