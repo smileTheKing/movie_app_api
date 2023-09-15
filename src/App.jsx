@@ -7,10 +7,11 @@ import Navbar from "./components/Navbar";
 import { AppProvider } from "./utils/AppContext";
 import Favorite from "./pages/Favorite";
 import Footer from "./components/Footer";
+import PageNotFound from "./pages/PageNotFound";
 
 
 
-const NotFound = () => <h1>404 no content found!</h1>;
+
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <Route path="/movie" element={<Movie />} />
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/detail/:id" element={<MovieDetail />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
         <Footer/>
