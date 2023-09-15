@@ -2,7 +2,9 @@ import React from 'react'
 
 const Favorite = () => {
   return (
-    <div className=' flex flex-1'>Favorite</div>
+    <div className=' flex flex-1'>
+      Favorite Movies
+    </div>
   )
 }
 
