@@ -5,6 +5,8 @@ import MovieDetail from "./components/MovieDetail";
 import Movie from "./components/Movie";
 import Navbar from "./components/Navbar";
 import { AppProvider } from "./utils/AppContext";
+import Favorite from "./pages/Favorite";
+import Footer from "./components/Footer";
 
 
 
@@ -20,11 +22,12 @@ function App() {
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="/movie" element={<Movie />} />
+            <Route path="/favorite" element={<Favorite />} />
             <Route path="/detail/:id" element={<MovieDetail />} />
             <Route path="*" element={<NotFound />} />
           </Route>
-         
         </Routes>
+        <Footer/>
       </BrowserRouter>
       </AppProvider>
      </div>
