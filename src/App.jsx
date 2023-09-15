@@ -12,11 +12,6 @@ import PageNotFound from "./pages/PageNotFound";
 
 
 
-<<<<<<< HEAD
-
-const NotFound = () => <h1>404 no content found!</h1>;
-=======
->>>>>>> daae95ac5c60213efd038403072ccec5cff56327
 
 function App() {
   return (
