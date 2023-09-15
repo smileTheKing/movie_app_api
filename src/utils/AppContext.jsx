@@ -44,6 +44,8 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+
+
   useEffect(() => {
     //call getMovie
     getMovies();

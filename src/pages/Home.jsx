@@ -1,29 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Movie from "../components/Movie";
 import SideBar from "../components/SideBar";
 import { useAppContext } from "../utils/AppContext";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { movies, searchMovie, search,error } = useAppContext();
 
   return (
-    <div className=" w-full flex min-h-screen  bg-white">
+    <div className=" w-full lg:flex-row flex flex-col flex-1 bg-slate-600">
       <SideBar />
+<<<<<<< HEAD
       <div className="px-8 py-12  relative flex justify-start items-start flex-wrap">
+=======
+      <div className=" w-full mt-8 md:mx-6 items-center justify-center relative flex md:justify-start md:items-start flex-wrap overflow-hidden ">
+>>>>>>> a14e5f3f3f2803cf199230fe785260150a0cda73
         {/**check if search is empty than a return all movies*/}
         {movies && !search ? (
           movies?.map((movie) => (
-            <div className="m-2" key={movie.imdbID}>
+            <Link to={`/detail/${movie.imdbID}`} className="m-2" key={movie.imdbID} >
               <Movie movie={movie} />
-            </div>
+            </Link>
           ))
         ) : (
           <>
           {/** display only search Movies*/}
             {!error?(searchMovie.map((movie) => (
-              <div className="m-2" key={movie.imdbID}>
-                <Movie movie={movie} />
-              </div>)
+             <Link  className="m-2" to={`/detail/${movie.imdbID}`}>
+             <Movie movie={movie} />
+           </Link>)
             )):(<div className=" w-[500px] top-[350px]  left-[350px]  absolute  text-3xl font-semibold "><h1>{error}</h1></div>) }
           </>
         )}
