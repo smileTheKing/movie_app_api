@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { useAppContext } from '../utils/AppContext';
+
 
 const Movie = ({movie}) => {
     //artwork title description year
