@@ -1,0 +1,9 @@
+
+{
+    "rewrites": [
+      {
+        "source": "/proxy/:match*",
+        "destination":"http://www.omdbapi.com"
+      }
+    ]
+  }
