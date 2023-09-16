@@ -5,7 +5,7 @@ import React from "react";
 
 const PageNotFound = () => {
   return (
-    <div className=" flex flex-1 justify-center items-center">
+    <div className=" flex flex-1 bg-slate-800  overflow-hidden  min-h-screen justify-center items-center mt-16">
       <Player
         autoplay
         loop
