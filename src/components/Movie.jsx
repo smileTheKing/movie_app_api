@@ -1,27 +1,30 @@
-import React from 'react'
-import { Heart } from 'lucide-react';
-import { useAppContext } from '../utils/AppContext';
-import { Link } from 'react-router-dom';
-const Movie = ({movie}) => {
-    //artwork title description year
-   const {favorite,setFavorite} = useAppContext()
-  return (
-
-
-<div className=" max-h-[450px] h-[450px] w-[300px] max-w-[300px]">
-    <Link  to={`/detail/${movie.imdbID}`}>
-        <img className="w-full h-full rounded-lg object-fit" src={movie?.Poster} alt="product image" />
-    </Link>
+import React from "react";
+import { Heart } from "lucide-react";
+import { useAppContext } from "../utils/AppContext";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+const Movie = ({ movie }) => {
   
-</div>
-
+  //artwork title description year
+  const { favorite, setFavorite } = useAppContext();
+  return (
+    <motion.div 
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.8 }}
     
-  )
-}
+    className="max-h-[25rem] h-[25rem] w-[300px] max-w-[300px] ">
+      <Link to={`/detail/${movie.imdbID}`}>
+        <img
+          className="w-full h-full rounded-lg object-cover"
+          src={movie?.Poster}
+          alt="product image"
+        />
+      </Link>
+    </motion.div>
+  );
+};
 
 export default Movie;
-
-
 
 {
   /**
