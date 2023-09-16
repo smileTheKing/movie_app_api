@@ -18,6 +18,7 @@ const Navbar = () => {
         <ul className="container w-full  flex justify-between items-center">
           <div>
             <Link to="/">Logo</Link>
+            <Button variant="contained"><img src=c: \Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.pngalt="logo" width={"20px"} />&nbsp;{Movie button}</Button>
           </div>
 
           <div
