@@ -8,6 +8,7 @@ import {
   MonitorPlay,
   Play,
   Star,
+  X,
 } from "lucide-react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Loading from "../assets/loading.json";
@@ -38,7 +39,21 @@ const MovieDetail = () => {
   }, [id]);
 
   return (
-    <div className="bg-slate-800 mt-16 text-slate-200 flex flex-1 flex-col justify-center items-center overflow-hidden min-h-screen p-8">
+    <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen p-8">
+      <div className=" self-end  ">
+            <motion.button
+              variants={{
+                hidden: { opacity: 0, x: 10 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.75 }}
+             className=" flex p-2  font-bold" onClick={() => back("/")}>
+              <X to={"/"} className=" font-bod hover:text-red-400 mb-8 md:mb-0"   size={34}/>
+            </motion.button>
+          </div>
+      
       {loading ? (
         <Player autoplay loop src={Loading} className=" w-96 h-96" />
       ) : (
@@ -50,17 +65,13 @@ const MovieDetail = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-           className="flex flex-col">
+          className="flex flex-col  flex-1 w-full h-full md:items-center md:justify-center ml-12 "
+        >
+          
 
-<div className=" self-start">
-            <button className=" flex p-2  font-bold" onClick={() => back("/")}>
-              <ChevronLeft to={"/"} className=" inline-block" /> Back
-            </button>
-      </div>
-
-          <div className=" flex flex-col md:flex-row  justify-between ">
+          <div className=" flex flex-col md:flex-row gap-12  justify-center items-start w-1/2 ">
             {/** first part*/}
-            <div className="flex flex-col  items-start md:items-end justify-between  space-y-4 p-4  w-full order-3 md:order-1">
+            <div className="flex flex-col  items-start  justify-between  space-y-4  w-2/4 order-3 md:order-1">
               <div className=" flex">
                 <Star size={24} color="yellow" fill="yellow" />
                 <Star size={24} color="yellow" fill="yellow" />
@@ -69,7 +80,7 @@ const MovieDetail = () => {
                 <Star size={24} color="yellow" />
               </div>
 
-              <div className=" flex flex-col  md:items-end">
+              <div className=" flex flex-col">
                 <h1 className=" font-bold text-2xl">GENRE</h1>
                 <div className=" text-slate-400 ">
                   <h1 className=" font-bold text-1xl">
@@ -84,16 +95,16 @@ const MovieDetail = () => {
                 </div>
               </div>
 
-              <div className=" flex flex-col md:items-end">
+              <div className=" flex flex-col ">
                 <h1 className=" font-bold text-2xl">DIRECTOR</h1>
                 <h1 className=" font-bold text-slate-400 text-1xl break-words">
                   {movieDetail?.Director}
                 </h1>
               </div>
 
-              <div className=" flex flex-col md:items-end">
+              <div className=" flex flex-col ">
                 <h1 className=" font-bold text-2xl">WRITER</h1>
-                <div className=" text-slate-400">
+                <div className=" text-slate-400 ">
                   <h1 className=" font-bold text-1xl ">
                     {movieDetail?.Writer?.split(",")[0]}
                   </h1>
@@ -109,8 +120,8 @@ const MovieDetail = () => {
 
             {/** second part */}
             <div
-             className="flex flex-col  items-start justify-between space-y-4  w-full order-2 md:order-2 p-4" 
-            //className=" flex flex-col    items-start justify-between max-h-[25.6rem] h-[25.6rem]  w-[32rem]"
+              className="flex flex-col min-w-[24rem] items-start justify-between space-y-4 min-h-[24rem]  order-2 md:order-2 "
+              //className=" flex flex-col    items-start justify-between max-h-[25.6rem] h-[25.6rem]  w-[32rem]"
             >
               <h1 className=" font-bold text-3xl"> {movieDetail?.Title}</h1>
 
@@ -131,14 +142,14 @@ const MovieDetail = () => {
                 <h1 className=" font-bold "> {movieDetail.Plot}</h1>
               </div>
               <div className=" flex  space-x-4">
-                <div className="flex flex-col justify-center items-center ">
+                <div className="flex flex-col justify-center items-center gap-2">
                   <div className="bg-slate-200 p-3 rounded-lg">
                     <MonitorPlay size={24} className=" " color="gray" />
                   </div>
                   <h4>Trailer</h4>
                 </div>
-                <div className="flex flex-col justify-center items-center ">
-                  <div className="bg-slate-200 p-3 rounded-lg">
+                <div className="flex flex-col justify-center items-center gap-2 ">
+                  <div className="bg-slate-200 p-3 rounded-lg ">
                     <Play size={24} className=" " color="gray" fill="gray" />
                   </div>
                   <h4>Play</h4>
@@ -147,9 +158,7 @@ const MovieDetail = () => {
             </div>
 
             {/** third part */}
-            <div
-             className="flex  min-w-[24rem] h-[30rem] order-1 md:order-3 p-4" 
-            >
+            <div className="flex md:min-w-[24rem]  w-[24rem] h-[30rem] order-1 md:order-3">
               <img
                 src={movieDetail.Poster}
                 alt="img"
@@ -166,6 +175,12 @@ const MovieDetail = () => {
 export default MovieDetail;
 
 /**
+ * 
+ * <div className=" self-start ">
+            <button className=" flex p-2  font-bold" onClick={() => back("/")}>
+              <ChevronLeft to={"/"} className=" inline-block" /> Back
+            </button>
+          </div>
  * 
  * import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
