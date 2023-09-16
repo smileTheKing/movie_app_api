@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useAppContext } from "../utils/AppContext";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { getMovieByTitle, search, setSeacrh } = useAppContext();
@@ -39,16 +40,25 @@ const Navbar = () => {
           </div>
 
           <div className=" flex space-x-4 justify-center items-center">
-            <li>
+            <motion.li className = "box" 
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
               <Link to="/">Home</Link>
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li className = "box" 
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
               <Link to="/favorite">Collection</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li className = "box" 
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
               <Link to="/login">Login</Link>
-            </li>
+            </motion.li>
           </div>
         </ul>
       </nav>
