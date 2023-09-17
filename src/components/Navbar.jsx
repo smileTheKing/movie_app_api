@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav className="w-full max-h-[80px] h-[80px]  flex text-white justify-center bg-[#073674]">
         <ul className="container w-full  flex justify-between items-center">
           <div>
-            <Button variant="contained"><img src=c: \Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.pngalt="logo" width={"20px"} ;{Movie button}</Button>
+            <img src={require(c:\Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.png)} alt="logo"/>
           </div>
 
           <div
