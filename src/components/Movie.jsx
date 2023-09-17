@@ -18,7 +18,7 @@ const Movie = ({ movie }) => {
     className="max-h-[25rem] h-[25rem] w-[300px] max-w-[300px] ">
       <Link to={`/detail/${movie.imdbID}`}>
         <img
-          className="w-full h-full rounded-lg object-cover"
+          className="w-full h-full rounded-lg "
           src={movie?.Poster ||ImageAvailable}
           alt="product image"
         />
