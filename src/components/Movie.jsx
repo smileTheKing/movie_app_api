@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { motion } from "framer-motion";
-import { useAppContext } from '../utils/AppContext';
-
-
-const Movie = ({movie}) => {
-    //artwork title description year
-   const {favorite,setFavorite} = useAppContext()
-=======
 import React from "react";
 import { Heart } from "lucide-react";
 import { useAppContext } from "../utils/AppContext";
@@ -20,7 +10,6 @@ const Movie = ({ movie }) => {
   
   //artwork title description year
   const { favorite, setFavorite } = useAppContext();
->>>>>>> e620e218f428e18e27d43de5f519b92513be7e79
   return (
     <motion.div 
     whileHover={{ scale: 1.05 }}
