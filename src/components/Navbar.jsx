@@ -14,16 +14,15 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full max-h-[80px] h-[80px]  flex text-white justify-center bg-slate-900">
+      <nav className="w-full max-h-[80px] h-[80px]  flex text-white justify-center bg-[#073674]">
         <ul className="container w-full  flex justify-between items-center">
           <div>
-            <Link to="/">Logo</Link>
-            <Button variant="contained"><img src=c: \Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.pngalt="logo" width={"20px"} />&nbsp;{Movie button}</Button>
+            <Button variant="contained"><img src=c: \Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.pngalt="logo" width={"20px"} ;{Movie button}</Button>
           </div>
 
           <div
             onKeyUpCapture={handleSearch}
-            className="overflow-hidden flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-md text-slate-300"
+            className="overflow-hidden flex border-2  items-center justify-center border-hidden-underline/25 text-center  w-[450px] rounded-md text-slate-300"
             placeholder="search"
           >
             <input
