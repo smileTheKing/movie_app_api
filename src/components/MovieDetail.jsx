@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect,useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import getApi from '../utils/API';
-import { Calendar, ChevronLeft, Clock, MonitorPlay, Play, Star, VideoOff } from 'lucide-react';
-import { motion } from "framer-motion";
-=======
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import getApi from "../utils/API";
@@ -20,7 +13,6 @@ import {
 import { Player } from "@lottiefiles/react-lottie-player";
 import { motion } from "framer-motion";
 import { Loading } from "../assets";
->>>>>>> main
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -54,62 +46,6 @@ const MovieDetail = () => {
   }, [id]);
 
   return (
-<<<<<<< HEAD
-   <div className=' bg-slate-800  text-slate-200 flex flex-1 flex-col'>
-    
-      <div className=' container flex  flex-col-reverse md:flex-row flex-1 mx-auto p-12 md:items-center items-start  space-x-14'>     
-      <motion.button className = "box" 
-      whileHover={{ scale: 2.5 }}
-      whileTap={{ scale: 2.0 }}
-      transition={{ type: "bounce", stiffness: 400, damping: 17 }} 
-      onClick={()=>back('/')}><ChevronLeft to={'/'} /> Back</motion.button>
-        {/** first part*/}
-       
-        <div className=' flex flex-col  w-2/4 items-end text-right justify-start gap-8'>
-        <div className=' flex'>
-          <Star size={24} color='yellow' fill='yellow'/>
-          <Star size={24} color='yellow' fill='yellow'/>
-          <Star size={24}color='yellow' fill='yellow'/>
-          <Star size={24} color='yellow'/>
-          <Star size={24} color='yellow'/>
-          </div>
-        
-          <div className=' flex flex-col items-end '>
-          <h1 className=' font-bold text-2xl'>GENRE</h1>
-          <div className=' text-slate-400 '>
-          <h1 className=' font-bold text-1xl'> {movieDetail?.Genre?.split(',')[0]}</h1>
-          <h1 className=' font-bold text-1xl'> {movieDetail?.Genre?.split(',')[1]}</h1>
-          <h1 className=' font-bold text-1xl'> {movieDetail?.Genre?.split(',')[2]}</h1>
-          </div>
-         
-          </div>
-
-
-          <div className=' flex flex-col items-end'>
-          <h1 className=' font-bold text-2xl'>DIRECTOR</h1>
-          <h1 className=' font-bold text-slate-400 text-1xl break-words'>{movieDetail?.Director}</h1>
-          </div>
-        
-          <div className=' flex flex-col items-end'>
-          <h1 className=' font-bold text-2xl'>WRITER</h1>
-          <div className=' text-slate-400'>
-          <h1 className=' font-bold text-1xl '>{movieDetail?.Writer?.split(',')[0]}</h1>
-          <h1 className=' font-bold text-1xl '>{movieDetail?.Writer?.split(',')[1]}</h1>
-          <h1 className=' font-bold text-1xl'>{movieDetail?.Writer?.split(',')[2]}</h1>
-          </div>
-        
-          </div>
-       
-        </div>
-
-        {/** second part */}
-        <div className=' flex flex-col  w-full items-start justify-start gap-8'>
-        <h1 className=' font-bold text-3xl'> {movieDetail?.Title}</h1>
-       
-          <h1 className=' font-bold text-1xl flex gap-2'> <span className=' inline-block'><Clock/> </span> {movieDetail?.Runtime}</h1>
-          <h1 className=' font-bold flex gap-2'>  <span className=' inline-block'><Calendar size={20}/> </span> {movieDetail.Year} </h1>
-
-=======
     <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen p-8">
      { !loading &&(<div className=" self-end  ">
             <motion.button
@@ -138,7 +74,6 @@ const MovieDetail = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="flex flex-col  flex-1 w-full h-full md:items-center md:justify-center ml-12 "
         >
->>>>>>> main
           
 
           <div className=" flex flex-col md:flex-row gap-12  justify-center items-start w-1/2 ">

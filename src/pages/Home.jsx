@@ -3,16 +3,12 @@ import Movie from "../components/Movie";
 import SideBar from "../components/SideBar";
 import { useAppContext } from "../utils/AppContext";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { motion } from "framer-motion"
-=======
 import { motion } from "framer-motion";
 import Pagination from "../components/Pagination";
 import { Loading } from "../assets";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 
->>>>>>> main
 
 const Home = () => {
   const { movies, searchMovie, search, loading,currentPage,totalResults,onPageChange } = useAppContext();
