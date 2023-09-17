@@ -1,7 +1,6 @@
-import {Player } from "@lottiefiles/react-lottie-player";
-import PageNotFound4 from '../assets/404.json'
-
 import React from "react";
+import {Player } from "@lottiefiles/react-lottie-player";
+import { Page404 } from "../assets";
 
 const PageNotFound = () => {
   return (
@@ -9,7 +8,7 @@ const PageNotFound = () => {
       <Player
         autoplay
         loop
-        src={PageNotFound4}
+        src={Page404}
         style={{ height: "300px", width: "300px" }}
       >
        

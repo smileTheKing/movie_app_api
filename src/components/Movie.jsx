@@ -3,6 +3,9 @@ import { Heart } from "lucide-react";
 import { useAppContext } from "../utils/AppContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ImageAvailable } from "../assets";
+
+
 const Movie = ({ movie }) => {
   
   //artwork title description year
@@ -16,7 +19,7 @@ const Movie = ({ movie }) => {
       <Link to={`/detail/${movie.imdbID}`}>
         <img
           className="w-full h-full rounded-lg object-cover"
-          src={movie?.Poster}
+          src={movie?.Poster ||ImageAvailable}
           alt="product image"
         />
       </Link>

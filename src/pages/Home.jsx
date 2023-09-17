@@ -4,8 +4,72 @@ import SideBar from "../components/SideBar";
 import { useAppContext } from "../utils/AppContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Pagination from "../components/Pagination";
+import { Loading } from "../assets";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-const Pagination = () => {
+
+
+const Home = () => {
+  const { movies, searchMovie, search, loading,currentPage,totalResults,onPageChange } = useAppContext();
+
+  return (
+    <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-800 ">
+      <SideBar />
+      <div className="w-full flex-1 md:ml-24 md:pb-24 pt-12 flex flex-col  gap-12 items-center">
+      <h1 className="md:-ml-24 font-bold text-slate-100 text-2xl ">Movie Search</h1>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: -10 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="w-full flex gap-8 flex-wrap items-start justify-center lg:justify-normal"
+        >
+          {/**check if search is empty than a return all movies*/}
+          {loading ? (
+            <>
+              {/** display only search Movies*/}
+            
+              <Player autoplay loop src={Loading} className=" w-96 h-96" />
+              
+            </>
+          ): (
+
+            movies?.map((movie) => (
+              <motion.div
+               className=" " key={movie.imdbID}>
+                <Movie movie={movie} />
+              </motion.div>
+            ))
+          ) }
+        </motion.div>
+        <div className=" mb-9 md:m-0">
+        <Pagination page={currentPage} totalResults={totalResults} onPageChange={onPageChange}/>
+        </div>
+      
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+{
+  /**
+   *  {movies?.map((movie,idx) => (
+          <div className="m-2" key={idx}>
+               <Movie movie={movie}/>
+          </div>
+        ))}
+
+
+
+
+
+        const Pagination = ({props}) => {
   return (
     <nav aria-label="pagination" className="mt-12 ">
       <ul className="inline-flex -space-x-px text-base h-10 ">
@@ -68,64 +132,5 @@ const Pagination = () => {
     </nav>
   );
 };
-
-const Home = () => {
-  const { movies, searchMovie, search, error } = useAppContext();
-
-  return (
-    <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-800">
-      <SideBar />
-      <div className="w-full flex-1 md:ml-24 md:pb-24 pt-24 flex flex-col   gap-12 items-center">
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: -10 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="w-full flex gap-8 flex-wrap items-start justify-center lg:justify-normal"
-        >
-          {/**check if search is empty than a return all movies*/}
-          {movies && !search ? (
-            movies?.map((movie) => (
-              <motion.div
-  
-               className=" " key={movie.imdbID}>
-                <Movie movie={movie} />
-              </motion.div>
-            ))
-          ) : (
-            <>
-              {/** display only search Movies*/}
-              {!error ? (
-                searchMovie.map((movie) => (
-                  <Link className="m-2" to={`/detail/${movie.imdbID}`}>
-                    <Movie movie={movie} />
-                  </Link>
-                ))
-              ) : (
-                <div className=" w-[500px] top-[350px]  left-[350px]  absolute  text-3xl font-semibold ">
-                  <h1>{error}</h1>
-                </div>
-              )}
-            </>
-          )}
-        </motion.div>
-        <Pagination />
-      </div>
-    </div>
-  );
-};
-
-export default Home;
-
-{
-  /**
-   *  {movies?.map((movie,idx) => (
-          <div className="m-2" key={idx}>
-               <Movie movie={movie}/>
-          </div>
-        ))}
    */
 }

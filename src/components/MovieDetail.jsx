@@ -11,14 +11,16 @@ import {
   X,
 } from "lucide-react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import Loading from "../assets/loading.json";
 import { motion } from "framer-motion";
+import { Loading } from "../assets";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movieDetail, setMovieDetail] = useState([]);
   const [loading, setLoading] = useState(true);
   const back = useNavigate();
+
+  //console.log(movieDetail.Poster)
 
   // a function for fetching the movie details
   const getMovieById = async () => {
@@ -32,15 +34,20 @@ const MovieDetail = () => {
       console.log(e.message);
     }
   };
-
+  const scrollTop = ()=>{
+    return window.scroll({
+      top:0,
+  })
+  }
   //fetch the movie details when page is loaded
   useEffect(() => {
     getMovieById();
+    scrollTop()
   }, [id]);
 
   return (
     <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen p-8">
-      <div className=" self-end  ">
+     { !loading &&(<div className=" self-end  ">
             <motion.button
               variants={{
                 hidden: { opacity: 0, x: 10 },
@@ -49,10 +56,10 @@ const MovieDetail = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.5, delay: 0.75 }}
-             className=" flex p-2  font-bold" onClick={() => back("/")}>
-              <X to={"/"} className=" font-bod hover:text-red-400 mb-8 md:mb-0"   size={34}/>
+             className=" flex p-2   font-bold" onClick={() => back("/")}>
+             <span className=" ">  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-400 mb-8 md:mb-0 "   size={34}/></span>
             </motion.button>
-          </div>
+          </div>)}
       
       {loading ? (
         <Player autoplay loop src={Loading} className=" w-96 h-96" />
@@ -81,7 +88,7 @@ const MovieDetail = () => {
               </div>
 
               <div className=" flex flex-col">
-                <h1 className=" font-bold text-2xl">GENRE</h1>
+                <h1 className=" font-bold text-2xl ">GENRE</h1>
                 <div className=" text-slate-400 ">
                   <h1 className=" font-bold text-1xl">
                     {movieDetail?.Genre?.split(",")[0]}

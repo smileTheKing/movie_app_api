@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useAppContext } from "../utils/AppContext";
 
 const Navbar = () => {
-  const { getMovieByTitle, search, setSeacrh } = useAppContext();
+  const { getMovieByTitle, search, setSeacrh,getMovies  } = useAppContext();
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (search) {
-      return getMovieByTitle(search);
+      return await getMovieByTitle(search);
     }
-    return;
+    return ;
   };
+
+  const handleClear = async () => {
+   
+      setSeacrh("")
+      getMovies(1)
+      
+  }
 
   return (
     <>
@@ -38,7 +45,7 @@ const Navbar = () => {
             />
             <button
               className="flex-2 px-4 text-slate-400 hover:text-red-300"
-              onClick={() => setSeacrh("")}
+              onClick={handleClear}
             >
               clear
             </button>
