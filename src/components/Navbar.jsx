@@ -22,6 +22,17 @@ const Navbar = () => {
 
   return (
     <>
+    
+      <nav className="w-full max-h-[80px] h-[80px]  flex text-white justify-center bg-[#073674]">
+        <ul className="container w-full  flex justify-between items-center">
+          <div>
+            <img src={require(c:\Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.png)} alt="logo"/>
+          </div>
+
+          <div
+            onKeyUpCapture={handleSearch}
+            className="overflow-hidden flex border-2  items-center justify-center border-hidden-underline/25 text-center  w-[450px] rounded-md text-slate-300"
+
       <nav className="bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center">
@@ -37,6 +48,7 @@ const Navbar = () => {
           <div
             onKeyUpCapture={handleSearch}
             className="hidden overflow-hidden md:flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-md text-slate-300"
+
             placeholder="search"
           >
             <input
