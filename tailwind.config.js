@@ -8,7 +8,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'Cinzel':['cinzel','serif'],
+      'cinzel':['cinzel','serif'],
       fontFamily:['Shadows Into Light', 'cursive'],
     },
     extend: {

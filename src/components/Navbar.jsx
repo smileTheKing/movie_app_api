@@ -30,7 +30,7 @@ const Navbar = () => {
               className="h-24 mr-3"
               alt=" Logo"
             />
-            <span className="font-cinzel self-center text-2xl font-semibold whitespace-nowrap text-white">
+            <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">
               MovieNook
             </span>
           </Link>
