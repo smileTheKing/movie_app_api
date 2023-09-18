@@ -8,22 +8,22 @@ const SideBar = () => {
         <h2 className=' font-bold text-3xl mt-4'> Genre</h2>
         <hr className='border-slate-500 w-full my-4 ' />
         <ul  className='mt-8 space-y-6 flex flex-col items-center text-slate-300 justify-center font-semibold '>       
-            <Link> <motion.li className = "box" 
+            <Link> <motion.li
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }} className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"> Action</motion.li></Link>
-            <Link> <motion.li className = "box" 
+            transition={{ type: "spring", stiffness: 400, damping: 17 }} className="box block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"> Action</motion.li></Link>
+            <Link> <motion.li 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }} className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"> Adventure</motion.li></Link>
-            <Link> <motion.li className = "box" 
+            transition={{ type: "spring", stiffness: 400, damping: 17 }} className=" box block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"> Adventure</motion.li></Link>
+            <Link> <motion.li
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" >Sci-fi</motion.li></Link>
-            <Link> <motion.li className = "box" 
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}className="box block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" >Sci-fi</motion.li></Link>
+            <Link> <motion.li 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }} className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" >Comedy</motion.li></Link>
+            transition={{ type: "spring", stiffness: 400, damping: 17 }} className="box block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" >Comedy</motion.li></Link>
         </ul>
     </div>
   )
