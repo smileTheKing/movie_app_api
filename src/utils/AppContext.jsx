@@ -5,9 +5,9 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
-  const [search, setSeacrh] = useState("");
+  const [search, setSearch] = useState("");
   const [error, setError] = useState("");
-  const [searchMovie, setSeacrhMovie] = useState([]);
+  const [searchMovie, setSearchMovie] = useState([]);
   const [totalResults, setTotalResults] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
   const getMovies = async (page) => {
     try {
       const result = await getApi.get("", { params: { s: "movie" , page:page} });
-      //result is only resuting a array
+      //result is only resulting a array
       if (result.data) {
       setLoading(false);
       setMovies(result.data.Search||[]);
@@ -30,7 +30,7 @@ export const AppProvider = ({ children }) => {
   };
 
 
-  // get for moive by title than return a array 
+  // get for movie by title than return a array 
   const getMovieByTitle = async (title) => {
   
     try {
@@ -76,9 +76,9 @@ export const AppProvider = ({ children }) => {
         getMovies,
         getMovieByTitle,
         search,
-        setSeacrh,
+        setSearch,
         searchMovie,
-        setSeacrhMovie,
+        setSearchMovie,
         error,
         favorite, 
         setFavorite,
