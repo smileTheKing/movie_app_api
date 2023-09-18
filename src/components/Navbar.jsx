@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useAppContext } from "../utils/AppContext";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { getMovieByTitle, search, setSeacrh,getMovies  } = useAppContext();
@@ -82,31 +83,40 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 text-white font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
-              <li>
+            <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                  aria-current="page"
+                  className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Home
                 </Link>
-              </li>
-              <li>
+                </motion.li>
+              
+                <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/favorite"
                   className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Favorite
                 </Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/services"
                   className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Services
                 </Link>
-              </li>
+                </motion.li>
             </ul>
           </div>
         </div>
