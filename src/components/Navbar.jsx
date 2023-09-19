@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               src="src/assets/movie-app-logo.png"
-              className="h-24 mr-3"
+              className="h-24 mr-3 animate-spin"
               alt=" Logo"
             />
             <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">
@@ -36,7 +36,7 @@ const Navbar = () => {
           </Link>
           <div
             onKeyUpCapture={handleSearch}
-            className="hidden overflow-hidden md:flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-md text-slate-300"
+            className="hidden overflow-hidden md:flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-lg text-slate-300"
             placeholder="search"
           >
             <input
