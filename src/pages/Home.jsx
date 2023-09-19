@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "../components/Movie";
-import SideBar from "../components/SideBar";
+import SideBar from "../pages/SideBar";
 import { useAppContext } from "../utils/AppContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -15,9 +15,9 @@ const Home = () => {
 
   return (
     <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-800 ">
-      <SideBar />
+      
       <div className="w-full flex-1 md:ml-24 md:pb-24 pt-12 flex flex-col  gap-12 items-center">
-      <h1 className="md:-ml-24 font-bold text-slate-100 text-2xl ">Movie Search</h1>
+      <h1 className="md:-ml-24 font-bold text-slate-100 text-2xl ">Movies</h1>
         <motion.div
           variants={{
             hidden: { opacity: 0, y: -10 },

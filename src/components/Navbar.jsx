@@ -44,12 +44,16 @@ const Navbar = () => {
               onChange={(e) => setSeacrh(e.target.value)}
               className="flex-1 p-2 outline-none bg-inherit text-center"
             />
-            <button
-              className="flex-2 px-4 text-slate-400 hover:text-red-300"
+            <motion.button
+              className='box'
+              className="flex-2 px-4 text-slate-400 hover:text-red-600"
               onClick={handleClear}
+              whileHover={{ scale: 1.5 }}
+              whileTap={{ scale: 1.0 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               clear
-            </button>
+            </motion.button>
           </div>
           <div className="md:flex md:order-2">
          
@@ -86,7 +90,7 @@ const Navbar = () => {
             <motion.li className = "box" 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+            transition={{ type: "spring", stiffness: 200, damping: 17 }}>
                 <Link
                   to="/"
                   className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
@@ -94,8 +98,20 @@ const Navbar = () => {
                   Home
                 </Link>
                 </motion.li>
-              
+
                 <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 200, damping: 17 }}>
+                <Link
+                  to="/genre"
+                  className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >
+                  Genre
+                </Link>
+              </motion.li>
+              
+                {/* <motion.li className = "box" 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}>
@@ -105,11 +121,11 @@ const Navbar = () => {
                 >
                   Favorite
                 </Link>
-              </motion.li>
+              </motion.li> */}
               <motion.li className = "box" 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+            transition={{ type: "spring", stiffness: 200, damping: 17 }}>
                 <Link
                   to="/services"
                   className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"

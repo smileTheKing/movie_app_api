@@ -47,7 +47,7 @@ const MovieDetail = () => {
 
   return (
     <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen p-8">
-     { !loading &&(<div className=" self-end  ">
+     { !loading &&(<div className="self-end">
             <motion.button
               variants={{
                 hidden: { opacity: 0, x: 10 },
@@ -57,7 +57,10 @@ const MovieDetail = () => {
               animate="visible"
               transition={{ duration: 0.5, delay: 0.75 }}
              className=" flex p-2   font-bold" onClick={() => back("/")}>
-             <span className=" ">  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-400 mb-8 md:mb-0 "   size={34}/></span>
+             <motion.span className="box" 
+             whileHover={{ scale: 2.5 }}
+             whileTap={{ scale: 1.0 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>  <X style={{textShadow:'0 2px 4px white'}} className= "hover:text-red-600 mb-8 md:mb-0"    size={40}/></motion.span>
             </motion.button>
           </div>)}
       
@@ -169,7 +172,7 @@ const MovieDetail = () => {
               <img
                 src={movieDetail.Poster}
                 alt="img"
-                className=" rounded-lg  object-cover bg-slate-200 justify-center w-full"
+                className=" rounded-lg  bg-slate-200 justify-center w-full"
               />
             </div>
           </div>

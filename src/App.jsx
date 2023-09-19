@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import MovieDetail from "./components/MovieDetail";
 import Movie from "./components/Movie";
 import Navbar from "./components/Navbar";
+import SideBar from "./pages/SideBar";
 import { AppProvider } from "./utils/AppContext";
 import Favorite from "./pages/Favorite";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="/movie" element={<Movie />} />
+            <Route path="/genre" element={<SideBar />} />
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/detail/:id" element={<MovieDetail />} />
             <Route path="*" element={<PageNotFound />} />
