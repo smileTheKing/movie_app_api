@@ -12,13 +12,14 @@ const Movie = ({ movie }) => {
   const { favorite, setFavorite } = useAppContext();
   return (
     <motion.div 
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.8 }}
+    whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 450, damping: 20 }}
     
     className="max-h-[25rem] h-[25rem] w-[300px] max-w-[300px] ">
       <Link to={`/detail/${movie.imdbID}`}>
         <img
-          className="w-full h-full rounded-lg object-cover"
+          className="w-full h-full rounded-lg "
           src={movie?.Poster ||ImageAvailable}
           alt="product image"
         />
@@ -50,8 +51,7 @@ export default Movie;
             </div>
             
           </div>
-        
-        </div>
+    </motion.div>
     </div>
    */
 }

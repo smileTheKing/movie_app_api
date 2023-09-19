@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useAppContext } from "../utils/AppContext";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { getMovieByTitle, search, setSeacrh,getMovies  } = useAppContext();
@@ -21,6 +22,17 @@ const Navbar = () => {
 
   return (
     <>
+    
+      <nav className="w-full max-h-[80px] h-[80px]  flex text-white justify-center bg-[#073674]">
+        <ul className="container w-full  flex justify-between items-center">
+          <div>
+            <img src={require(c:\Users\leoso\Desktop\W3project\W3-project-images\movie-app-logo.png)} alt="logo"/>
+          </div>
+
+          <div
+            onKeyUpCapture={handleSearch}
+            className="overflow-hidden flex border-2  items-center justify-center border-hidden-underline/25 text-center  w-[450px] rounded-md text-slate-300"
+
       <nav className="bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center">
@@ -82,31 +94,40 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 text-white font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
-              <li>
+            <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                  aria-current="page"
+                  className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Home
                 </Link>
-              </li>
-              <li>
+                </motion.li>
+              
+                <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/favorite"
                   className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Favorite
                 </Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li className = "box" 
+            whileHover={{ scale: 2.0 }}
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/services"
                   className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Services
                 </Link>
-              </li>
+                </motion.li>
             </ul>
           </div>
         </div>
