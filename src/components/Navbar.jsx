@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useAppContext } from "../utils/AppContext";
 import { motion } from "framer-motion";
-
-
+import logo from "../assets/logo.png"
 const Navbar = () => {
-  const { getMovieByTitle, search, setSeacrh,getMovies  } = useAppContext();
+  const { getMovieByTitle, search, setSearch,getMovies  } = useAppContext();
 
   const handleSearch = async () => {
     if (search) {
@@ -16,33 +15,33 @@ const Navbar = () => {
 
   const handleClear = async () => {
    
-      setSeacrh("")
+      setSearch("")
       getMovies(1)
       
   }
 
   return (
     <>
-      <nav className="bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-700">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-blue-900">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-.5">
           <Link to="/" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8 mr-3"
+              src={logo}
+              className="h-24 mr-3 animate-spin"
               alt=" Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-              Movie
+            <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">
+              MovieNook
             </span>
           </Link>
           <div
             onKeyUpCapture={handleSearch}
-            className="hidden overflow-hidden md:flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-md text-slate-300"
+            className="hidden overflow-hidden md:flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-lg text-slate-300"
             placeholder="search"
           >
             <input
               value={search}
-              onChange={(e) => setSeacrh(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               className="flex-1 p-2 outline-none bg-inherit text-center"
             />
             <motion.button

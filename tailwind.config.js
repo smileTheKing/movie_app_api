@@ -7,7 +7,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-  
+    fontFamily: {
+      'cinzel':['cinzel','serif'],
+      fontFamily:['Shadows Into Light', 'cursive'],
+    },
     extend: {
       textShadow: {
         sm: '0 1px 2px white',

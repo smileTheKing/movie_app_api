@@ -46,8 +46,8 @@ const MovieDetail = () => {
   }, [id]);
 
   return (
-    <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen p-8">
-     { !loading &&(<div className="self-end">
+    <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen min-w-screen p-8">
+     { !loading &&(<div className=" self-end  ">
             <motion.button
               variants={{
                 hidden: { opacity: 0, x: 10 },
@@ -57,10 +57,7 @@ const MovieDetail = () => {
               animate="visible"
               transition={{ duration: 0.5, delay: 0.75 }}
              className=" flex p-2   font-bold" onClick={() => back("/")}>
-             <motion.span className="box" 
-             whileHover={{ scale: 2.5 }}
-             whileTap={{ scale: 1.0 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}>  <X style={{textShadow:'0 2px 4px white'}} className= "hover:text-red-600 mb-8 md:mb-0"    size={40}/></motion.span>
+             <span >  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-400 mb-8 md:mb-0 "   size={34}/></span>
             </motion.button>
           </div>)}
       
@@ -75,7 +72,7 @@ const MovieDetail = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="flex flex-col  flex-1 w-full h-full md:items-center md:justify-center ml-12 "
+          className="flex flex-col  flex-1 w-full h-full md:items-center md:justify-center  "
         >
           
 
