@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useAppContext } from "../utils/AppContext";
 import { motion } from "framer-motion";
-
+import logo from "../assets/logo.png"
 const Navbar = () => {
   const { getMovieByTitle, search, setSearch,getMovies  } = useAppContext();
 
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-.5">
           <Link to="/" className="flex items-center">
             <img
-              src="src/assets/movie-app-logo.png"
+              src={logo}
               className="h-24 mr-3 animate-spin"
               alt=" Logo"
             />
