@@ -44,7 +44,7 @@ const Pagination = ({ page, totalResults, onPageChange }) => {
           <li>
             <button
               onClick={handlePrevious}
-              className={`flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 border border-gray-300 rounded-l-lg ${page === 1 ? 'pointer-events-none' : 'hover:bg-gray-100 hover:text-gray-700'} dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 ${page === 1 ? 'dark:hover:bg-gray-700 dark:hover:text-white' : ''}`}
+              className={`flex items-center justify-center px-4 h-10 ml-0 leading-tight text-[#F2E9E4] border border-[#9a8c98] rounded-l-lg ${page === 1 ? 'pointer-events-none' : 'hover:bg-gray-100 hover:text-gray-700'} dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 ${page === 1 ? 'dark:hover:bg-gray-700 dark:hover:text-white' : ''}`}
             >
               Previous
             </button>
@@ -54,7 +54,7 @@ const Pagination = ({ page, totalResults, onPageChange }) => {
             <li key={pageNumber}>
               <button
                 onClick={() => onPageChange(pageNumber)}
-                className={`flex items-center justify-center px-4 h-10 leading-tight text-gray-500 border border-gray-300 ${page === pageNumber ? 'text-blue-600 border-blue-600 bg-blue-50' : 'hover:bg-gray-100 hover:text-gray-700'} dark:border-gray-700 dark:bg-gray-700 dark:text-white`}
+                className={`flex items-center justify-center px-4 h-10 leading-tight text-[#F2E9E4] border border-[#9a8c98] ${page === pageNumber ? 'text-blue-600 border-blue-600 bg-blue-50' : 'hover:bg-gray-100 hover:text-gray-700'} dark:border-gray-700 dark:bg-gray-700 dark:text-white`}
               >
                 {pageNumber}
               </button>
@@ -64,7 +64,7 @@ const Pagination = ({ page, totalResults, onPageChange }) => {
           <li>
             <button
               onClick={handleNext}
-              className={`flex items-center justify-center px-4 h-10 leading-tight text-gray-500 border border-gray-300 rounded-r-lg ${page === totalPages ? 'pointer-events-none' : 'hover:bg-gray-100 hover:text-gray-700'} dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 ${page === totalPages ? 'dark:hover:bg-gray-700 dark:hover:text-white' : ''}`}
+              className={`flex items-center justify-center px-4 h-10 leading-tight text-[#F2E9E4] border border-[#9a8c98] rounded-r-lg ${page === totalPages ? 'pointer-events-none' : 'hover:bg-gray-100 hover:text-gray-700'} dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 ${page === totalPages ? 'dark:hover:bg-gray-700 dark:hover:text-white' : ''}`}
             >
               Next
             </button>

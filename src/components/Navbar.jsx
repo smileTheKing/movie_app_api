@@ -22,21 +22,21 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-blue-900">
+      <nav className="bg-[#22223b] fixed w-full z-20 top-0 left-0 border-b border-blue-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-.5">
           <Link to="/" className="flex items-center">
             <img
               src={logo}
-              className="h-24 mr-3 animate-spin"
+              className="h-24 mr-3 hover:animate-spin"
               alt=" Logo"
             />
-            <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">
+            <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-[#f2e9e4]">
               MovieNook
             </span>
           </Link>
           <div
             onKeyUpCapture={handleSearch}
-            className="hidden overflow-hidden md:flex border-2  items-center justify-center border-slate-100/25 text-center  w-[450px] rounded-lg text-slate-300"
+            className="hidden overflow-hidden md:flex border-2 items-center justify-center border-[#9a8c98] text-center  w-[450px] rounded-lg text-[#f2e9e4]"
             placeholder="search"
           >
             <input
@@ -56,7 +56,7 @@ const Navbar = () => {
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#4A4E69] rounded-lg md:hidden hover:bg-[#2b2b59] focus:outline-none focus:ring-2 focus:ring-[#313173]"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -79,10 +79,10 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className="items-center text-white justify-between hidden w-full md:flex md:w-auto md:order-1"
+            className="items-center text-[#f2e9e4] justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 text-white font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 text-[#f2e9e4] font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <motion.li className = "box" 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}
@@ -112,7 +112,7 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}>
                 <Link
                   to="/services"
-                  className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-[#f2e9e4] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
                   Services
                 </Link>
