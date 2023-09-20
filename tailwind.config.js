@@ -7,11 +7,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extended: {
     fontFamily: {
-      cinzel: ['cinzel', 'serif'],
-    noto: ['noto Serif', 'serif'],
-    roboto: ['roboto Mono', 'monospace'],
+      'cinzel':['cinzel','serif'],
+      fontFamily:['Shadows Into Light', 'cursive'],
     },
     extend: {
       textShadow: {
@@ -43,5 +41,4 @@ export default {
    
     
   ],
-}
 }
