@@ -4,7 +4,7 @@ import { Page404 } from "../assets";
 
 const PageNotFound = () => {
   return (
-    <div className=" flex flex-1 bg-slate-800  overflow-hidden  min-h-screen justify-center items-center mt-16">
+    <div className=" flex flex-1 bg-[#22223b]  overflow-hidden  min-h-screen justify-center items-center mt-4">
       <Player
         autoplay
         loop
