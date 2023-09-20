@@ -82,7 +82,6 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-<<<<<<< HEAD
           
           {/* <div
             className="items-center text-white justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -92,14 +91,6 @@ const Navbar = () => {
             <ul className="flex flex-col p-4 md:p-0 mt-4 text-white font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
             {/* <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"> */}
               
-=======
-          </div>
-          <div
-            className="items-center text-[#f2e9e4] justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
-          >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 text-[#f2e9e4] font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
->>>>>>> c26597ba621d0794617b9c606852fb0f644084a0
             <motion.li className = "box" 
             whileHover={{ scale: 2.0 }}
             whileTap={{ scale: 1.5 }}

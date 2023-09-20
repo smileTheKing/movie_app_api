@@ -56,17 +56,12 @@ const MovieDetail = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.5, delay: 0.75 }}
-<<<<<<< HEAD
               className=" flex p-2   font-bold" onClick={() => back("/")}>
               <motion.span className = "box" 
               whileHover={{ scale: 2.0 }}
               whileTap={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}>  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-600 mb-8 md:mb-0 " 
                 size={38}/></motion.span>
-=======
-             className=" flex p-2   font-noto serif" onClick={() => back("/")}>
-             <span >  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-400 mb-8 md:mb-0 "   size={34}/></span>
->>>>>>> c26597ba621d0794617b9c606852fb0f644084a0
             </motion.button>
           </div>)}
       
