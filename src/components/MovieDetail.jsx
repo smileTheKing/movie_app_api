@@ -56,7 +56,7 @@ const MovieDetail = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.5, delay: 0.75 }}
-             className=" flex p-2   font-bold" onClick={() => back("/")}>
+             className=" flex p-2   font-noto serif" onClick={() => back("/")}>
              <span >  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-400 mb-8 md:mb-0 "   size={34}/></span>
             </motion.button>
           </div>)}
