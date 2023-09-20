@@ -46,7 +46,7 @@ const MovieDetail = () => {
   }, [id]);
 
   return (
-    <div className="bg-slate-800 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen min-w-screen p-8">
+    <div className="bg-slate-900 mt-16 text-slate-200 flex w-full flex-col justify-center items-center overflow-hidden min-h-screen min-w-screen p-8">
      { !loading &&(<div className=" self-end  ">
             <motion.button
               variants={{
