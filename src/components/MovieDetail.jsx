@@ -57,7 +57,7 @@ const MovieDetail = () => {
               animate="visible"
               transition={{ duration: 0.5, delay: 0.75 }}
               className=" flex p-2   font-bold" onClick={() => back("/")}>
-              <motion.span className = "box" 
+              <motion.span
               whileHover={{ scale: 2.0 }}
               whileTap={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}>  <X style={{textShadow:'0 2px 4px white'}} className=" hover:text-red-600 mb-8 md:mb-0 " 
@@ -84,11 +84,11 @@ const MovieDetail = () => {
             {/** first part*/}
             <div className="flex flex-col  items-start  justify-between  space-y-4  w-2/4 order-3 md:order-1">
               <div className=" flex">
-                <motion.div className = "box" whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" fill="yellow" /></motion.div>
-                <motion.div className = "box" whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" fill="yellow" /></motion.div>
-                <motion.div className = "box" whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" fill="yellow" /></motion.div>
-                <motion.div className = "box" whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" /></motion.div>
-                <motion.div className = "box" whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" /></motion.div>
+                <motion.div whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" fill="yellow" /></motion.div>
+                <motion.div whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" fill="yellow" /></motion.div>
+                <motion.div whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" fill="yellow" /></motion.div>
+                <motion.div whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" /></motion.div>
+                <motion.div whileHover={{ scale: 2.0 }} whileTap={{ scale: 1.8 }}transition={{ type: "spring", stiffness: 400, damping: 17 }}><Star size={24} color="yellow" /></motion.div>
               </div>
 
               <div className=" flex flex-col">
@@ -154,7 +154,7 @@ const MovieDetail = () => {
               </div>
               <div className=" flex  space-x-4">
                 <div className="flex flex-col justify-center items-center gap-2">
-                  <motion.div className = "box" whileHover={{ scale: 1.5 }}
+                  <motion.div whileHover={{ scale: 1.5 }}
                   whileTap={{ scale: 1.0 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }} className="bg-slate-200 p-3 rounded-lg">
                     <MonitorPlay size={24} className=" " color="gray" />
@@ -162,7 +162,7 @@ const MovieDetail = () => {
                   <h4>Trailer</h4>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-2 ">
-                  <motion.div classname = "box" whileHover={{ scale: 1.5 }}
+                  <motion.div whileHover={{ scale: 1.5 }}
                     whileTap={{ scale: 1.0 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }} className="bg-slate-200 p-3 rounded-lg ">
                     <Play size={24} className=" " color="gray" fill="gray" />

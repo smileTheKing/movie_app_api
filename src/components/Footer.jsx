@@ -18,7 +18,7 @@ function Footer() {
               className="h-24 mr-3 animate-spin"
               alt=" Logo"
             />
-                  <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">Movie</span>
+                  <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">MovieNook</span>
               </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
