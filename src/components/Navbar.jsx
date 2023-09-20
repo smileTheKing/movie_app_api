@@ -30,7 +30,7 @@ const Navbar = () => {
               className="h-24 mr-3 hover:animate-spin"
               alt=" Logo"
             />
-            <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-[#f2e9e4]">
+            <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">
               MovieNook
             </span>
           </Link>
