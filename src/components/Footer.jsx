@@ -1,32 +1,35 @@
 
 import React from 'react';
 import logo from "../assets/logo.png"
+import { Link } from 'react-router-dom';
+
+
 function Footer() {
   return (
     
 
-<footer className="bg-[#22223b]">
+<footer className="bg-blue-900">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" className="flex items-center">
+              <Link to="/" className="flex items-center">
               <img
               src={logo}
-              className="h-24 mr-3 "
+              className="h-24 mr-3 animate-spin"
               alt=" Logo"
             />
-                  <span className="self-center text-2xl font-cinzel whitespace-nowrap text-[#f2e9e4]">MovieNook</span>
-              </a>
+                  <span className="font-cinzel self-center text-4xl font-semibold whitespace-nowrap text-white">MovieNook</span>
+              </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                   <h2 className="mb-6 text-sm font-semibold  uppercase text-[#f2e9e4]">Resources</h2>
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <a href="https://flowbite.com/" className="hover:underline">Movie</a>
+                          <a href="https://flowbite.com/" className="hover:underline text-white">Movie</a>
                       </li>
                       <li>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                          <a href="https://tailwindcss.com/" className="hover:underline text-white">Tailwind CSS</a>
                       </li>
                   </ul>
               </div>
@@ -34,10 +37,10 @@ function Footer() {
                   <h2 className="mb-6 text-sm font-semibold  uppercase text-[#f2e9e4]">Follow us</h2>
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
+                          <a href="https://github.com/themesberg/flowbite" className="hover:underline text-white">Github</a>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                          <a href="https://discord.gg/4eeurUVvTy" className="hover:underline text-white">Discord</a>
                       </li>
                   </ul>
               </div>
@@ -45,10 +48,10 @@ function Footer() {
                   <h2 className="mb-6 text-sm font-semibold  uppercase text-[#f2e9e4]">Legal</h2>
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <a href="#" className="hover:underline">Privacy Policy</a>
+                          <a href="#" className="hover:underline text-white">Privacy Policy</a>
                       </li>
                       <li>
-                          <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                          <a href="#" className="hover:underline text-white">Terms &amp; Conditions</a>
                       </li>
                   </ul>
               </div>

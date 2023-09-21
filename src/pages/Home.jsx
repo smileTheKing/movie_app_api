@@ -14,10 +14,11 @@ const Home = () => {
   const { movies, searchMovie, search, loading,currentPage,totalResults,onPageChange } = useAppContext();
 
   return (
-    <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-800 ">
+    <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-900 ">
       
       <div className="w-full flex-1 md:ml-24 md:pb-24 pt-12 flex flex-col  gap-12 items-center">
-      <h1 className="md:-ml-24 font-bold text-slate-100 text-2xl ">Browse Library</h1>
+        <br></br>
+      <h1 className="font-cinzel md:-ml-24 font-bold text-slate-100 text-3xl ">Browse Library</h1>
         <motion.div
           variants={{
             hidden: { opacity: 0, y: -10 },
