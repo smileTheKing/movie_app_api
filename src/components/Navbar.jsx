@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-col md:flex-row md:items-center md:justify-between md:gap-8 mr-2">
           <div className="flex items-center w-full justify-between">
             <Link to="/" className="flex items-center">
-              <img src={logo} className="h-24 hover:animate-spin" alt="Logo" />
+              <img src={logo} className="h-24 animate-spin" alt="Logo" />
               <span className="font-cinzel self-center text-2xl md:text-4xl font-semibold whitespace-nowrap text-white">
                 MovieNook
               </span>
