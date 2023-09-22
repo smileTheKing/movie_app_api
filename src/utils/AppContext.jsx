@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
 
   const getMovies = async (page) => {
     try {
-      const result = await getApi.get("", { params: { s: "movie" , page:page} });
+      const result = await getApi.get("", { params: { s: "movie" , page:page,type:'movie'} });
       //result is only resulting a array
       if (result.data) {
       setLoading(false);
@@ -33,10 +33,9 @@ export const AppProvider = ({ children }) => {
 
   // get for movie by title than return a array 
   const getMovieByTitle = async (title) => {
-  
     try {
      // if (search.length < 3) return;
-      const result = await getApi.get("", { params: { s: title } });
+      const result = await getApi.get("", { params: { s: title,type:'movie' } });
       if (search.length < 3 ) return 
       setError(result.data.Error)
       if (result.data.Search) {

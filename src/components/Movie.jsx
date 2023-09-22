@@ -18,8 +18,8 @@ const Movie = ({ movie }) => {
     className="md:max-h-[25rem] md:h-[25rem] md:w-[300px] md:max-w-[300px]  w-[220px] h-[300px]">
       <Link to={`/detail/${movie.imdbID}`}>
         <img
-          className="w-full h-full rounded-lg "
-          src={movie?.Poster ||ImageAvailable}
+          className="w-full h-full rounded-lg"
+          src={movie?.Poster === 'N/A'  ?ImageAvailable:movie?.Poster}
           alt="product image"
         />
       </Link>

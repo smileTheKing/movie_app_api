@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { motion } from "framer-motion";
-import { Loading } from "../assets";
+import { ImageAvailable, Loading } from "../assets";
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -20,7 +20,7 @@ const MovieDetail = () => {
   const [loading, setLoading] = useState(true);
   const back = useNavigate();
 
-  //console.log(movieDetail.Poster)
+console.log(movieDetail.Poster)
 
   // a function for fetching the movie details
   const getMovieById = async () => {
@@ -175,7 +175,7 @@ const MovieDetail = () => {
             {/** third part */}
             <div className="flex md:min-w-[24rem]  w-[24rem] h-[30rem] order-1 md:order-3">
               <img
-                src={movieDetail.Poster}
+                src={movieDetail?.Poster === 'N/A' ?ImageAvailable:movieDetail.Poster }
                 alt="img"
                 className=" rounded-lg  bg-slate-200 justify-center w-full"
               />
