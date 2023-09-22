@@ -11,13 +11,11 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 
 const Home = () => {
-  const { movies, searchMovie, search, loading,currentPage,totalResults,onPageChange } = useAppContext();
+  const { movies, loading,currentPage,totalResults,onPageChange } = useAppContext();
 
   return (
     <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-900 ">
-      
       <div className="w-full flex-1 md:ml-24 md:pb-24 pt-12 flex flex-col  gap-12 items-center">
-        <br></br>
       <h1 className="font-cinzel md:-ml-24 font-bold text-slate-100 text-3xl ">Browse Library</h1>
         <motion.div
           variants={{
@@ -27,7 +25,7 @@ const Home = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="w-full flex gap-8 flex-wrap items-start justify-center lg:justify-normal"
+          className="w-full flex gap-8 flex-wrap items-start justify-center md:justify-normal "
         >
           {/**check if search is empty than a return all movies*/}
           {loading ? (
@@ -40,10 +38,10 @@ const Home = () => {
           ): (
 
             movies?.map((movie) => (
-              <motion.div
-               className=" " key={movie.imdbID}>
+              <div
+               className=" m-0 p-0 " key={movie.imdbID}>
                 <Movie movie={movie} />
-              </motion.div>
+              </div>
             ))
           ) }
         </motion.div>
