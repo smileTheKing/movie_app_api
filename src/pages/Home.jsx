@@ -8,18 +8,21 @@ import Pagination from "../components/Pagination";
 import { Loading } from "../assets";
 import { Player } from "@lottiefiles/react-lottie-player";
 
-
-
 const Home = () => {
-  const { movies, loading,currentPage,totalResults,onPageChange } = useAppContext();
+  const { movies, loading, currentPage, totalResults, onPageChange } =
+    useAppContext();
 
   return (
     <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-900 ">
-      <div className="w-full flex-1 md:ml-24 md:pb-24 pt-12 flex flex-col  gap-12 items-center">
-        {/* Putting a break here from navbar to title */}
-        <br></br>
-      <h1 className="font-cinzel md:-ml-24 font-bold text-slate-100 text-3xl ">Browse Library</h1>
-        <motion.div
+      <div className="w-full  md:pb-24 mt-12 flex flex-col  justify-center gap-12 items-center">
+        <h1 className="font-cinzel  font-bold text-slate-100 text-3xl ">
+          Browse Library
+        </h1>
+
+        <div className="flex flex-col items-center justify-center">
+            {loading?(<div className=" w-96  h-96">
+              <Player autoplay loop src={Loading} />
+            </div>):( <motion.div
           variants={{
             hidden: { opacity: 0, y: -10 },
             visible: { opacity: 1, y: 0 },
@@ -27,30 +30,25 @@ const Home = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="w-full flex gap-8 flex-wrap items-start justify-center md:justify-normal "
+          className="grid-flow-row grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 mx-auto md:gap-8 gap-4 "
         >
           {/**check if search is empty than a return all movies*/}
-          {loading ? (
-            <>
-              {/** display only search Movies*/}
-            
-              <Player autoplay loop src={Loading} className=" w-96 h-96" />
-              
-            </>
-          ): (
-
-            movies?.map((movie) => (
-              <div
-               className=" m-0 p-0 " key={movie.imdbID}>
-                <Movie movie={movie} />
-              </div>
-            ))
-          ) }
-        </motion.div>
-        <div className=" mb-9 md:m-0">
-        <Pagination page={currentPage} totalResults={totalResults} onPageChange={onPageChange}/>
+          {movies?.map((movie) => (
+            <div className=" m-0 p-0 " key={movie.imdbID}>
+              <Movie movie={movie} />
+            </div>
+          ))}
+        </motion.div>)}
+        
         </div>
-      
+
+        <div className=" mb-9 md:m-0">
+          <Pagination
+            page={currentPage}
+            totalResults={totalResults}
+            onPageChange={onPageChange}
+          />
+        </div>
       </div>
     </div>
   );
