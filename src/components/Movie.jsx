@@ -14,7 +14,7 @@ const Movie = ({ movie }) => {
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 450, damping: 20 }}
     
-    className="max-h-[400px] max-w-[300px]   lg:h-[400px] lg:w-[300px]  md:h-[300px] md:w-[200px]  w-[180px] h-[200px]">
+    className="max-h-[400px] max-w-[300px]   lg:h-[400px] lg:w-[300px]  md:h-[300px] md:w-[250px]  w-[200px] h-[250px]">
       <Link to={`/detail/${movie.imdbID}`}>
         <img
           className="w-full h-full rounded-lg"
