@@ -7,7 +7,6 @@ import { ImageAvailable } from "../assets";
 
 
 const Movie = ({ movie }) => {
-  
   //artwork title description year
   return (
     <motion.div 
