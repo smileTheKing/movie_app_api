@@ -14,7 +14,15 @@ const Home = () => {
 
   return (
     <div className=" mt-16 w-full lg:flex-row flex flex-col flex-1 bg-slate-900 ">
+      <div className="w-full  md:pb-24 mt-12 flex flex-col  justify-center gap-12 items-center">
+        <h1 className="font-cinzel  font-bold text-slate-100 text-3xl ">
+          Browse Library
+        </h1>
 
+        <div className="flex flex-col items-center justify-center">
+            {loading?(<div className=" w-96  h-96">
+              <Player autoplay loop src={Loading} />
+            </div>):( <motion.div
           variants={{
             hidden: { opacity: 0, y: -10 },
             visible: { opacity: 1, y: 0 },
