@@ -1,4 +1,6 @@
 # React + Vite
+This is a movie lookup app built using React + Vite + Tailwind. You can use it to search the library for a movie and get a brief description of it (movie description, runtime, star rating, movie genre, director and writer).
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
